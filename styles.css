@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: "Open Sans", sans-serif;
 }
 
 html, body {
@@ -24,7 +25,11 @@ html, body {
 .sidebar {
     grid-column: 1;
     grid-row: 1 / -1;
-    background-color: aquamarine;
+    background-color: black;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 2fr;
+    align-items: center;
+    justify-content: center;
 }
 
 header {
@@ -37,4 +42,50 @@ main {
     grid-column: 2 / -1;
     grid-row: 2 / -1;
     background-color: burlywood;
+}
+
+.first, .second, .dashboard {
+    padding: 1em;
+}
+
+.sidebar > .dashboard {
+    grid-row: 1;
+}
+
+.sidebar > .first {
+    grid-row: 2;
+}
+
+.sidebar > .second {
+    grid-row: 3;
+}
+
+.icon {
+    width: 10%;
+    height: 8%;
+    filter: invert(100%);
+}
+
+
+
+.first div, .second div, .dashboard {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8%;
+}
+
+.big-icon {
+    width: 10%;
+    height: 90%;
+    filter: invert(100%);
+}
+
+.first div, .second div {
+    margin-bottom: 4%;
+}
+
+.first div p, .second div p, .dashboard h1 {
+    color: white;
 }
