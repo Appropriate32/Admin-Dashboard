@@ -160,7 +160,7 @@ input {
   width: 24px;
 }
 
-.notif, .first div, .second div {
+.notif, .first div, .second div, .card-logos .icon {
     transition: 0.3s ease all;
 }
 
@@ -169,7 +169,7 @@ input {
     cursor: pointer;
 }
 
-.notif:hover {
+.notif:hover, .card-logos .icon:hover {
     cursor: pointer;
     filter: invert(30%);
     transform: scale(1.5);
@@ -192,7 +192,7 @@ input:hover, input:focus {
     border-radius: 50%;
 }
 
-.top-right .profile-pic {
+.top-right .profile-pic, .trending-item .profile-pic {
     height: 2.2rem;
     width: 2.2rem;
 }
@@ -258,14 +258,10 @@ input:hover, input:focus {
     padding: 1em;
 }
 
-.announcements {
-    grid-column: 2;
-    grid-row: 1;
-}
-
 .trending {
     grid-column: 2;
     grid-row: 2;
+    padding: 1em;
 }
 
 .card {
@@ -299,3 +295,59 @@ input:hover, input:focus {
     grid-column: 1 / -1;
     font-size: 1.6rem;
 }
+
+.announce-child {
+    background-color: white;
+    border-radius: 2%;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.announce-child > *:not(:last-child) {
+    border-bottom: #e2e8f0 1px solid;
+    border-bottom-width: 70%;
+}
+
+.announce-item {
+    padding: 1.1em;
+}
+
+.announcements h1 {
+    margin-bottom: 0.5em;
+    margin-left: 1em;
+}
+
+.announcements {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
+}
+
+.trending-child {
+    padding: 1em;
+    background-color: white;
+    border-radius: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 0.6em;
+}
+
+.trending-item {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.announcements h1,
+.trending h1 {
+    margin-bottom: 0.5em;
+    margin-left: 0;
+    font-size: 1.6rem;       
+}
+
